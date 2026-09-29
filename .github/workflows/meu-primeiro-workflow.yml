@@ -3,7 +3,7 @@ name: Primeiro Workflow  Linuxtips
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   giropops:
@@ -14,4 +14,3 @@ jobs:
 
       - name: Exibit uma mensagem
         run: echo  "Estou Fazendo o curso guthub Action da Linuxtips"
-              
