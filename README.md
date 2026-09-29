@@ -5,4 +5,4 @@
 
 
 
-Last edition: 09/09/26.
+# Last edition: 29/09  - Apenas retomando os estudos. 
