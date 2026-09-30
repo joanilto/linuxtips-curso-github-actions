@@ -40,4 +40,5 @@ jobs:
       - name: Acessa arquivo mensagem
         run: mv strigus/mensagem.txt . && rm -rf ./strigus
 
-      - name: ler conteúdo da mensagem         
+      - name: ler conteúdo da mensagem  
+        run: cat mensagem.txt      
