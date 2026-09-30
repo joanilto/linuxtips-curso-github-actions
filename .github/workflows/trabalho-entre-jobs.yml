@@ -12,7 +12,7 @@ jobs:
         run: echo  "Estou Fazendo o curso guthub Action da Linuxtips" > ${{github.workspace}}//mensagem.txt
 
       - uses: actions/upload-artifact@v4
-        wih:
+        with:
         name: strigus-upload
         path: ${{github.workspace}}//mensagem.txt
          
