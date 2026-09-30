@@ -38,7 +38,4 @@ jobs:
         run: ls -lha
 
       - name: Acessa arquivo mensagem
-        run: mv strigus/mensagem.txt . && rm -rf ./strigus
-
-      - name: ler conteúdo da mensagem  
-        run: cat mensagem.txt      
+        run: cat mensagem.txt
