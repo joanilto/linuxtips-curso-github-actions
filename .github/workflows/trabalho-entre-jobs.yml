@@ -1,0 +1,43 @@
+name: Vendo arquivos compartilhados entre jobs
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job_1:
+    entre-steps:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Confere versao do ubuntu
+          run: cat /etc/os-release
+
+        - name: Exibit uma mensagem
+          run: echo  "Estou Fazendo o curso guthub Action da Linuxtips" > mensagem.txt
+
+        - name: Apenas uma steps
+          run: ls -lha
+
+        - name:  le conteudo do mensagem,txt
+          run: cat mensagem.txt 
+  job_2:
+    run-on: ubuntu-latest
+    steps:
+      - name: Ver o conteúdo do diretório
+        run: ls -lha
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: strigus
+          path: mensagem.txt
+      - name: Ver o contedudo do diretorio strigus
+        run: ls -lha && ls ./strigus/
+
+      - name: Acessa arquivo da mensagem
+        run: mv strigus/mensagem.txt .&& rm -rf ./strigus
+
+      - name: ver o conteúdo do diretorio
+        run: ls -lha
+
+      - name: Acessa arquivo mensagem
+        run: cat mensagem.txt               
