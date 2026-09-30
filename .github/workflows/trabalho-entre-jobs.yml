@@ -20,7 +20,7 @@ jobs:
       - name:  le conteudo do mensagem,txt
         run: cat mensagem.txt 
   job_2:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Ver o conteúdo do diretório
         run: ls -lha
