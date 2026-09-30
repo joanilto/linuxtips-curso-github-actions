@@ -32,10 +32,12 @@ jobs:
         run: ls -lha && ls ./strigus/
 
       - name: Acessa arquivo da mensagem
-        run: mv strigus/mensagem.txt .&& rm -rf ./strigus
+        run: mv strigus/mensagem.txt . && rm -rf ./strigus
 
       - name: ver o conteúdo do diretorio
         run: ls -lha
 
       - name: Acessa arquivo mensagem
-        run: mv strigus/mensagem.txt . && rm -rf ./strigus        
+        run: mv strigus/mensagem.txt . && rm -rf ./strigus
+
+      - name: ler conteúdo da mensagem         
