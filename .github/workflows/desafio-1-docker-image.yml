@@ -1,0 +1,10 @@
+name: Listar e analisar imagens Docker
+on:
+  workflow_dispatch
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configuracao inicial do Docker
+        uses: docker/setup-docker-action@v5
