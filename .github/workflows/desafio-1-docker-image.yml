@@ -4,11 +4,11 @@ on:
   workflow_call:
     inputs:
       image_version:
-        description: 'versão da imagem que será baixada pelo docker'
+        description: 'versao da imagem que sera baixada pelo docker'
         default: 'jpdiasdocker/api-contas:1.0.1'
   
 env:
-  - image-name: {{inputs.image_version}}
+  - image-name: {{inputs.}}
 jobs:
   docker:
     runs-on: ubuntu-latest
