@@ -8,3 +8,11 @@ jobs:
     steps:
       - name: Configuracao inicial do Docker
         uses: docker/setup-docker-action@v5
+        with:
+          daemon-config: |
+            {
+              "debug": true,
+              "features": {
+                "containerd-snapshotter": true
+              }
+            }
