@@ -1,7 +1,7 @@
 name: Listar e analisar imagens Docker
 on:
   workflow_dispatch
-Jobs:
+jobs:
   runs-on: ubuntu-latest
   steps:
     - name: Configuração inicial do Docker
