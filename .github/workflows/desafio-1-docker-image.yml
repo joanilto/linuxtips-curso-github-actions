@@ -4,7 +4,8 @@ on:
 jobs:
   runs-on: ubuntu-latest
   steps:
-    - name: Configuração inicial do Docker
+    - 
+      name: Configuração inicial do Docker
       uses: docker/setup-docker-action@v5
       with:
         daemon-config: |
