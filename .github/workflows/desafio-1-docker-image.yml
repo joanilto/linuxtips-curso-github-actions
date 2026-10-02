@@ -29,5 +29,15 @@ jobs:
         run:  docker pull ${{inputs.image_version}}
 
       - name: lista imagens docker locais
-        run: docker image ls  
+        run: docker image ls
+
+      - name: Docker Scout
+        id: docker-scout
+        uses: docker/scout-action@v1
+        with:
+          command: cves,recommendations,compare
+          to-latest: true
+          ignore-base: true
+          ignore-unchanged: true
+          only-fixed: true
 
