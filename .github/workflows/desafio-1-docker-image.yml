@@ -2,16 +2,17 @@ name: Listar e analisar imagens Docker
 on:
   workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - 
-      name: Configuração inicial do Docker
-      uses: docker/setup-docker-action@v5
-      with:
-        daemon-config: |
-          {
-            "debug": true,
-            "features": {
-              "containerd-snapshotter": true
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Configuração inicial do Docker
+        uses: docker/setup-docker-action@v5
+        with:
+          daemon-config: |
+            {
+              "debug": true,
+              "features": {
+                "containerd-snapshotter": true
+              }
             }
-          }
