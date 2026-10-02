@@ -1,7 +1,14 @@
 name: Listar e analisar imagens Docker
 on:
-  workflow_dispatch
-
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      image_version:
+        description: 'versão da imagem que será baixada pelo docker'
+        default: 'jpdiasdocker/api-contas:1.0.1'
+  
+env:
+  - image-name: {{inputs.image}}
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -16,3 +23,8 @@ jobs:
                 "containerd-snapshotter": true
               }
             }
+      - name: listar variavel da image
+        run: echo $image_version
+
+
+
