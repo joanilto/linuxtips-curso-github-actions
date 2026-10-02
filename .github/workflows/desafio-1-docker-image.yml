@@ -23,5 +23,11 @@ jobs:
               }
             }
       - name: listar variavel da image
-        run: echo thee image is ${{inputs.image_version}}
+        run: echo the image is ${{inputs.image_version}}
+
+      - name: Pull Docker image # api-contas
+        run:  docker pull ${{inputs.image_version}}
+
+      - name: lista imagens docker locais
+        run: docker image ls  
 
