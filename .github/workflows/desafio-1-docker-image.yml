@@ -1,7 +1,6 @@
 name: Listar e analisar imagens Docker
 on:
   workflow_dispatch:
-  workflow_call:
     inputs:
       image_version:
         description: 'versao da imagem que sera baixada pelo docker'
