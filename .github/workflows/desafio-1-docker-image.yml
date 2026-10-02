@@ -5,7 +5,7 @@ on:
     inputs:
       image_version:
         description: 'versao da imagem que sera baixada pelo docker'
-        default: 'jpdiasdocker/api-contas:1.0.1'
+        #default: 'jpdiasdocker/api-contas:1.0.1'
         required: true
         type: string
 
