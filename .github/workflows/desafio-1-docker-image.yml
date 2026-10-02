@@ -6,9 +6,7 @@ on:
       image_version:
         description: 'versao da imagem que sera baixada pelo docker'
         default: 'jpdiasdocker/api-contas:1.0.1'
-  
-env:
-  - image-name: {{inputs.}}
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -24,7 +22,5 @@ jobs:
               }
             }
       - name: listar variavel da image
-        run: echo $image_version
-
-
+        run: echo ${{inputs.image_version}}
 
