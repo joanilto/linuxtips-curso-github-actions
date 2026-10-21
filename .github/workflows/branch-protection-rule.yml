@@ -2,3 +2,6 @@ name: proction-rule-workflow
 on:
   branch_protection_rule:
     types: [created, deleted]
+  job:
+    runs-on: ubuntu-latest
+      
