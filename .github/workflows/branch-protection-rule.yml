@@ -1,7 +1,12 @@
-name: proction-rule-workflow
+name: proction rule workflow
 on:
   branch_protection_rule:
     types: [created, deleted]
-  job:
+  
+jobs:
+    print-modification:
     runs-on: ubuntu-latest
-      
+    steps:
+
+      - name: avisa sobre a modificação.
+        run: echo "Evento trigado, porque houve mudança no proction rule"
