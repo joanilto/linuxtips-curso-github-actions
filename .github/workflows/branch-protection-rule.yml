@@ -5,8 +5,8 @@ on:
   
 jobs:
     print-modification:
-    runs-on: ubuntu-latest
-    steps:
+      runs-on: ubuntu-latest
+      steps:
 
-      - name: avisa sobre a modificação.
-        run: echo "Evento trigado, porque houve mudança no proction rule"
+        - name: avisa sobre a modificação.
+          run: echo "Evento trigado, porque houve mudança no proction rule"
