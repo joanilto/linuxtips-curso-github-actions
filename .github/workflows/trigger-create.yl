@@ -1,0 +1,11 @@
+name: proction rule for create
+on:
+  create
+  
+jobs:
+    print-branch-or-tag-creation:
+      runs-on: ubuntu-latest
+      steps:
+
+        - name: avisa sobre a criação de uma nova branch ou tag
+          run: echo "Evento trigado, porque houve a criação de uma noa branch ou tag."
