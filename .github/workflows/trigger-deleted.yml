@@ -1,4 +1,4 @@
-name: proction rule for create
+name: proction rule for delete
 on:
   delete
   
