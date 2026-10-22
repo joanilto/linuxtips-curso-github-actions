@@ -1,0 +1,11 @@
+name: proction rule for create
+on:
+  delete
+  
+jobs:
+    print-branch-or-tag-creation:
+      runs-on: ubuntu-latest
+      steps:
+
+        - name: avisa sobre deleção de uma nova branch ou tag
+          run: echo "Evento trigado, porque houve a deleção  de uma noa branch ou tag."
