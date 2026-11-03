@@ -1,0 +1,12 @@
+name: Criando tigger do tipo deployment
+
+on:
+  deployment
+
+jobs:
+  job-deployment:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Exibe mensagem de deployment
+        run: echo "job triggado por um deployment externo"
+          
