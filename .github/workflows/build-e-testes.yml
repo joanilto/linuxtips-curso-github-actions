@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
         contents: read
-        packaages: write
+        packages: write
 
     steps:
     - name: Check Out repository
