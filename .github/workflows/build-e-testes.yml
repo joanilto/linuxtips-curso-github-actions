@@ -1,6 +1,6 @@
 Nome: Workflow para build de imagens Dockere
 
-On: 
+on: 
   workflow_dispatch:
     inputs:
       tag-image-build:
