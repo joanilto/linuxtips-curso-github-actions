@@ -3,12 +3,12 @@ Nome: Workflow para build de imagens Dockere
 on: 
   workflow_dispatch:
     inputs:
-      tag-image-build:
+      environment:
+      description: tag e name da image
+      tag-image-build: ${{inputs.image-build}}
+      image name: ${{inputs.image_name}}
         required: true
         type: string
-  env:
-    REGISTRY: docker.io
-    IMAGE_NAME: ${{inputs.image_name}}
 
         
 
