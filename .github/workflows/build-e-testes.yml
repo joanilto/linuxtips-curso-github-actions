@@ -7,8 +7,8 @@ on:
       description: tag e name da image
       tag-image-build: ${{inputs.image-build}}
       image name: ${{inputs.image_name}}
-        required: true
-        type: string
+      required: true
+      type: string
 
         
 
